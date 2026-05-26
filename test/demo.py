@@ -29,14 +29,14 @@ class Test(pta.Experiment):
         self.telescope.plot('var-hd')
         return 0
 
-# test = Test(n_map=100, 
-#             n_spec=10, 
-#             n_arr=1000, 
-#             seed_psr=42,
-#             seed_bg=43,
-#             distribution=pta.isotropic, 
-#             spectrum=pta.delta_1d,)
-# test.run()
+test = Test(n_map=100, 
+            n_spec=10, 
+            n_arr=1000, 
+            seed_psr=42,
+            seed_bg=43,
+            distribution=pta.isotropic, 
+            spectrum=pta.delta_1d,)
+test.run()
 
 class TestIdeal(pta.Experiment):
     def __init__(self, n_map=100, n_spec=100, n_arr=42, seed_psr=100, distribution=pta.dipole, spectrum=pta.delta_1d, distr_args=(1), spec_args=(10)):
